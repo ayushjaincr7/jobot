@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ReactMarkdowm from 'react-markdown'
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import Head from 'next/head';
 
 export default function Home() {
   const [apikey, setApiKey] = useState("");
@@ -52,6 +53,7 @@ export default function Home() {
   }
 
   return (
+    <><Head><title>Jobot - Your friendly neighbourhood AI</title></Head>
     <div className="flex flex-col h-screen">
       {/* Navigation Bar */}
       <nav className="shadow px-4 py-2 flex flex-row justify-between items-center">
@@ -100,6 +102,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-    </div>
+    </div></>
+    
   );
 }
